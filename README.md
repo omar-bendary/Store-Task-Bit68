@@ -266,7 +266,7 @@ link - Created at - Last scraped at - Last scraped by )
   * Create a cart for a user.
   * Returns cart_created=True and the cart_id
   * Note :<mark>User must be authenticated</mark>.
-* Sample: `curl http://127.0.0.1:8000/store/carts/ -X POST -H 'Accept: application/json' -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4MTY3ODYxLCJqdGkiOiI1NGVjY2I5Zjc2MjY0OGQ5YmU2ZjQwNjBkNDY2Y2ExZCIsInVzZXJfaWQiOjJ9.5K-I471R8DuXtkLRHFFG03LEsQuqevZStflyJhv0Exo"`
+* `curl http://127.0.0.1:8000/store/carts/ -X POST -H 'Accept: application/json' -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4MTY3ODYxLCJqdGkiOiI1NGVjY2I5Zjc2MjY0OGQ5YmU2ZjQwNjBkNDY2Y2ExZCIsInVzZXJfaWQiOjJ9.5K-I471R8DuXtkLRHFFG03LEsQuqevZStflyJhv0Exo"`
 
 ```json
 {
@@ -278,7 +278,7 @@ link - Created at - Last scraped at - Last scraped by )
 * Case1:
   * If a cart already exits it.Returns cart_already_exists= True and the cart_id
   * Note :<mark>User must be authenticated</mark>.
-* Sample: `curl http://127.0.0.1:8000/store/carts/ -X POST -H 'Accept: application/json' -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4MTY3ODYxLCJqdGkiOiI1NGVjY2I5Zjc2MjY0OGQ5YmU2ZjQwNjBkNDY2Y2ExZCIsInVzZXJfaWQiOjJ9.5K-I471R8DuXtkLRHFFG03LEsQuqevZStflyJhv0Exo"`
+* `curl http://127.0.0.1:8000/store/carts/ -X POST -H 'Accept: application/json' -H "Authorization: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4MTY3ODYxLCJqdGkiOiI1NGVjY2I5Zjc2MjY0OGQ5YmU2ZjQwNjBkNDY2Y2ExZCIsInVzZXJfaWQiOjJ9.5K-I471R8DuXtkLRHFFG03LEsQuqevZStflyJhv0Exo"`
 ```json
 {
     "cart_already_exists": true,
@@ -288,7 +288,7 @@ link - Created at - Last scraped at - Last scraped by )
         
 * Case2:
   * If the user is not authenticated (anonymous user).Returns detail=Authentication credentials were not provided.
-* Sample: `curl http://127.0.0.1:8000/store/carts/ -X POST `
+* `curl http://127.0.0.1:8000/store/carts/ -X POST `
 
 ```json
 {
@@ -381,7 +381,7 @@ link - Created at - Last scraped at - Last scraped by )
   * Returns a dictionary of the created item id, product_id and quantity.
   * If the item already exits in the cart it updates the quantity by adding the new quantity to the existing quantity. 
   * Note :<mark>User must be authenticated</mark>.
-* Sample: `curl http://127.0.0.1:8000/store/carts/f41bb933-fb99-4e29-869d-15baf87ae23c/items/ -X POST -H "Content-Type: application/json" -d '{"product_id" : 3, "quantity": 1}'`
+* `curl http://127.0.0.1:8000/store/carts/f41bb933-fb99-4e29-869d-15baf87ae23c/items/ -X POST -H "Content-Type: application/json" -d '{"product_id" : 3, "quantity": 1}'`
 
 ```json
 {
@@ -487,7 +487,7 @@ link - Created at - Last scraped at - Last scraped by )
 * General:
   * Deletes an order with given ID if it exists.
   * Note :<mark>User must be authenticated and Admin user</mark>.
-* Sample: `curl -X DELETE http://127.0.0.1:8000/store/orders/3/`
+* `curl -X DELETE http://127.0.0.1:8000/store/orders/3/`
 
 # Deployment N/A
 
