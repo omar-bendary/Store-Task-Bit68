@@ -27,7 +27,7 @@ git clone https://github.com/omar-bendary/Store-Task-Bit68.git
 ```
 
 # Pre-requisites and Local Development
-## Using Docker and Docker compose
+# Using Docker and Docker compose
 
 The first step is to sign up for
 a free account on [DockerHub](https://hub.docker.com/signup)  and then install the Docker desktop app on your local machine:
@@ -53,7 +53,7 @@ the same time) and additionally type docker-compose down.
 ```shell
 docker-compose down
 ```
-## Now let’s confirm everything is working
+### Now let’s confirm everything is working
 ```bash
 docker-compose exec web python manage.py  makemigrations 
 ```
@@ -66,9 +66,22 @@ docker-compose exec web python manage.py  migrate
 ```
 The application is run on http://127.0.0.1:8000/
 
-
+###  Set up your RDBMS , open your setting.py
+```python
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "db",  # set in docker-compose.yml
+        "PORT": 5432,  # default postgres port
+    }
+}
+```
 <br/>
 
+# Using virtual environment approach.
 ## To create a virtual environment 
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install packages.
